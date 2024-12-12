@@ -1,0 +1,266 @@
+body {
+    background-image: url(../img/bgbolts.gif);
+    background-attachment: fixed;
+    margin: auto;
+    padding: 0em;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    overflow-y: auto;
+    padding-top: 20px;
+}
+
+main table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    flex-grow: 1;
+}
+
+main table th {
+    color: var(--main-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+main table ul
+
+p, li {
+    line-height: 1.2;
+    text-indent: 20px;
+}
+
+ul {
+    list-style-image: url(../img/g_yellow_on.gif);
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
+}
+
+th {
+    background-color: #d6d6d6;
+    padding-top: 5px;
+    padding-right: 3px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+}
+
+a {
+    text-decoration: none;
+    padding: 2px;
+}
+
+.right {
+    text-align: right;
+}
+
+.table-bgcolor {
+    background-color: #d6d6d6;
+}
+
+.col-bgcolor {
+    background-color: #eeeeee;
+}
+
+#container {
+    background-color: #ffffff; /* white */
+    width: 60%;
+    margin-top: 2em;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-left: auto;
+    padding: 25px;
+}
+
+#container_body {
+    text-align: justify;
+}
+
+#header {
+    text-align: center;
+    color: #000000;
+}
+
+#nav {
+    background-color: #eeeeee;
+    font-weight: bold;
+    width: 95%;
+    position: sticky;
+    top: 0;
+    /* top -- right -- bottom -- left */
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    padding: 10px;
+}
+
+#nav a:hover {
+    background-color: #767676;
+    color: #ffffff; /* white */
+}
+
+#nav a {
+    color: #000000; /* black */
+}
+
+#nav button {
+    display: none;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#nav button.rotated {
+    transform: rotate(-90deg);
+}
+
+#nav button rotate {
+    transform: rotate(-90deg);
+}
+
+#nav #sidemenu {
+    background-color: #eeeeee;
+    text-align: left;
+    display: none;
+    left: -100px;
+    width: 100px;
+    z-index: 1;
+    position: absolute;
+    padding: 5px;
+    margin-top: 10px;
+    transition: left 0.3s ease, width .5s ease;
+}
+
+#nav #sidemenu a {
+    display: block;
+}
+
+#nav #sidemenu a:hover {
+    background-color: gray;
+}
+
+#nav #sidemenu.visible {
+    left: 0;
+    display: block;
+}
+
+#nav #mainmenu {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+}
+
+.mainteance {
+    background-color: #ffffff; /* white */
+    width: 60%;
+    text-align: center;
+    margin: 2em auto;
+    padding: 25px;
+}
+
+.tasktab {
+    display: table;
+    table-layout: fixed;
+    flex-grow: 1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tasktab ul {
+    margin-top: 5px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.TaskItem {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    border-radius: 10px;
+    padding: 5px 8px;
+    margin: 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#NewTaskDial .SubmitBtnPan {
+    margin-top: 1em;
+}
+
+.center {
+    text-align: center;
+}
+
+.active {
+    background-color: #ffc000;
+    color: #000000;
+    padding: 3px;
+}
+
+.curpage {
+    background-color: #ffc000;
+    color: #000000;
+    padding: 2px;
+}
+
+.curpage a {
+    pointer-events: none;
+}
+
+.menubtn {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+}
+
+#sitelogo {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* On screens that are less than 700px */
+@media screen and (max-width: 700px) {
+    #nav button {
+        display: block;
+    }
+    #nav #mainmenu {
+        display: none;
+    }
+    #nav #sidemenu {
+        display: none;
+    }
+}
+
+#NewTaskDial {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: solid;
+    padding: 1em;
+    background: white;
+    color: black;
+}
+
+dialog::backdrop {
+    background-color: hsla(0, 0%, 0%, .5);
+}

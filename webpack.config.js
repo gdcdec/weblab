@@ -1,6 +1,7 @@
-const path = require('path'); // Импортируем модуль "path" для работы
-с путями файлов
+ // Импортируем модуль "path" для работы с путями файлов
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     // Точка входа для сборки проекта
     entry: './src/index.js',
@@ -26,10 +27,28 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: './src/html/index.html',
             inject: true,
             chunks: ['index'],
             filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/about.html',
+            inject: true,
+            chunks: ['index'],
+            filename: 'about.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/projects.html',
+            inject: true,
+            chunks: ['index'],
+            filename: 'projects.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/tasks.html',
+            inject: true,
+            chunks: ['index'],
+            filename: 'tasks.html'
         }),
     ],
 
@@ -37,9 +56,13 @@ module.exports = {
         static: {
             // Каталог для статики
             directory: path.join(__dirname, 'dist'),
-    },
+        },
 
-    open: true, // Автоматически открывать браузер
+        open: {
+            app: {
+                name: 'chromium'
+            }
+        }
     },
 
     mode: 'development', // Режим сборки
