@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Задачи</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="author" href="about.txt" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <link type="image/x-icon" href="../img/book-favicon.png" rel="shortcut icon" />
+</head>
+<body>
+  <div id="container">
+    <p id="sitelogo"><img src="../img/logo.png" /></p>
+    <div id="nav">
+      <button>
+        <img src="../img/application-menu.svg" />
+      </button>
+      <div id="mainmenu">
+        <a href="./index.html">Главная</a>
+        <a class="curpage">Задачи</a>
+        <a href="./projects.html">Проекты</a>
+        <a href="./about.html">О проекте</a>
+      </div>
+      <div id="sidemenu">
+        <a href="./index.html">Главная</a>
+        <a class="curpage">Задачи</a>
+        <a href="./projects.html">Проекты</a>
+        <a href="./about.html">О проекте</a>
+      </div>
+    </div>
+    <div id="container_body">
+      <div id="header">
+        <hr />
+        <h1>Задачи</h1>
+        <hr />
+      </div>
+      <main>
+        <table class="tasktab">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Задача</th>
+              <th>В работе</th>
+              <th>Выполнена</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+              </td>
+              <td>
+                <ul>
+                  <li class="TaskItem">Item</li>
+                  <li class="TaskItem">Item</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li class="TaskItem"> item item Item</li>
+                  <li class="TaskItem"> item item Item</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li class="TaskItem">Item</li>
+                  <li class="TaskItem">Item</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="select"></td>
+              <td>Сделать уроки</td>
+              <td></td>
+              <td>&check;</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="select"></td>
+              <td>Выгулять собаку</td>
+              <td>&cross;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="select"></td>
+              <td>Помыть посуду</td>
+              <td></td>
+              <td>&check;</td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+      <p class="center">
+        <input type="submit" value="Удалить">
+        <input type="submit" value="Изм. статус">
+        <input id="AddNewTaskDialBtn" type="submit" value="Добавить">
+      </p>
+      <dialog id="NewTaskDial">
+        <div id="NewTaskDialArea">
+          <form method="dialog" class="center">
+            <p><b>Добавить задачу</b></p>
+            <input type="text" placeholder="Введите название" autocomplete="off">
+            <div class="SubmitBtnPan">
+              <button id="AddNewTaskBtn">Добавить</button>
+              <button id="CloseNewTaskDialBtn">Закрыть</button>
+            </div>
+          </form>
+        </div>
+      </dialog>
+    </div>
+    <div class="footer">
+      <hr />
+      Самара
+      <br />
+      2024
+    </div>
+  </div>
+  <script type="text/JavaScript" src="../js/showMenu.js"></script>
+  <script type="text/JavaScript" src="../js/addNewTask.js"></script>
+  <script type="text/JavaScript" src="bundle.js"></script>
+</body>
+</html>
+
